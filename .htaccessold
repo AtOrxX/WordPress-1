@@ -1,0 +1,24 @@
+
+# BEGIN WordPress
+# Les directives (lignes) entre « BEGIN WordPress » et « END WordPress » sont générées
+# dynamiquement, et doivent être modifiées uniquement via les filtres WordPress.
+# Toute modification des directives situées entre ces marqueurs sera surchargée.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+<<<<<<< HEAD
+RewriteBase /IntranetCSL/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /IntranetCSL/index.php [L]
+=======
+RewriteBase /Wordpress_Intranet/wordpress/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /Wordpress_Intranet/wordpress/index.php [L]
+>>>>>>> f2b76f98617d97d262ac3e5f5f03bb737ac3c202
+</IfModule>
+
+# END WordPress
